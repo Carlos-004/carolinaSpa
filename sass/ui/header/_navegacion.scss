@@ -1,0 +1,28 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.navegacion{
+    margin: 30px 0;
+    background-color: v.$primario;
+    padding: 1px 2px;
+
+    .navegacion__border{
+        border: dashed v.$blanco 2px;
+        .navegacion__contenedor{
+            display: flex;
+            justify-content: space-between;
+    
+            .navegacion__enlace{
+                color: v.$blanco;
+                padding: 10px 0;
+                font-size: 18px;
+            }
+            @include m.telefono{
+                justify-self: unset;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+    }
+    
+}

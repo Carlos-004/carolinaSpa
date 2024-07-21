@@ -1,0 +1,73 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.productos{
+    margin-top: 50px;
+
+    .productos__heading{
+        font-family: v.$fuenteCursiva;
+        text-align: center;
+        color: v.$secundario;
+        font-size: 40px;
+
+        span{
+            margin: -28px;
+            display: block;
+            color: v.$negro;
+            font-weight: 400;
+            font-size: 40px;
+            font-family: v.$fuentePrincipal;
+            text-transform: uppercase;
+        }
+        margin-bottom: 40px;
+    }
+
+    .productos__grid{
+        @include m.grid(4,20px);
+        @include m.tablet{
+            @include m.grid(2,20px);
+        }
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        .producto{
+            background-color: v.$blanco;
+
+            .producto__mask{
+                overflow: hidden;
+                img{
+                    // transition: transform 0.3s ease;
+                    transition-property:transform ;
+                    transition-duration: 300ms;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .producto__contenido{
+                padding: 10px;
+                .producto__nombre{
+                    font-family: v.$fuentePrincipal;
+                    text-align: center;
+                    color: v.$secundario;
+                    font-weight: 400;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                }
+
+                .producto__descripcion{
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    margin: 10px 0;
+                }
+                .producto__precio{
+                    text-align: center;
+                    color: v.$gris;
+                }
+            }
+        }
+    }
+}

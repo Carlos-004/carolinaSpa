@@ -1,0 +1,49 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.cita{
+    margin-top: 50px;
+    background-image: url(../../../img/bg_citas.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+
+    .cita__heading{
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 40px;
+    }
+    .cita__texto{
+        text-align: center;
+        color: v.$blanco;
+        max-width: 500px;
+        margin: 20px 0;
+        font-size: 16px;
+        line-height: 24px;
+
+        @include m.telefono{
+            width: 100%;
+        }
+    }
+    .cita__enlace{
+        display: block;
+        background-color: v.$primario;
+        padding: 10px;
+        width: 200px;
+        text-transform: uppercase;
+        text-align: center;
+        color: v.$blanco;
+        font-weight: bold;
+        @include m.telefono{
+            width: 100%;
+        }
+
+    }
+}   

@@ -1,0 +1,32 @@
+{
+  "name": "carolinaspa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8",
+    "vite": "^5.3.4"
+  },
+  "description": "Este es un proyecto en sass ",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Carlos-004/carolinaSpa.git"
+  },
+  "keywords": [
+    "sass",
+    "html",
+    "vite"
+  ],
+  "author": "Carlos Daniel \"deleonguzmancarlosdaniel6@gmail.com\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carlos-004/carolinaSpa/issues"
+  },
+  "homepage": "https://github.com/Carlos-004/carolinaSpa#readme"
+}

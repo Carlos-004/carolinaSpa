@@ -1,0 +1,32 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.footer{
+    margin-top: 50px;
+    .footer__grid{
+        border-bottom:solid 1px v.$gris;
+        padding-bottom: 10px;
+        @include m.grid(3,20px);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer__widget{
+            .footer__heading{
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+            .footer__texto{
+                font-size: 17px;
+                line-height: 24px;
+            }
+        }
+    }
+    .footer__copyright{
+        text-align: center;
+        font-size: 16px;
+        color: v.$gris;
+        padding: 10px 0;
+    }
+}

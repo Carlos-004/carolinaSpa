@@ -1,0 +1,72 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.horario{
+    margin-top: 40px;
+
+    .horario__grid {
+        @include m.grid(2,0);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        background-image: url("../../../img/bg_horarios.jpg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 750px;
+    }
+}
+
+.horario__contenido{
+    background-color: v.$primario;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:30px;
+
+    @include m.desktop{
+        padding: 0 30px;
+    }
+
+    .horario__heading{
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .horario__texto{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 21px;
+        margin: 20px 0;
+    }
+}
+
+.tabla{
+    // border: solid 3px v.$secundario;
+    background-color: v.$secundario;
+    width: 100%;
+    padding: 10px 0 0 0;
+    .tabla__thead{
+
+        .tabla__th{
+            color: v.$blanco;
+            padding: 10px;
+        }
+    }
+    .tabla__tbody{
+        background-color: v.$primario;
+        .tabla__tr{
+            &:hover{
+                background-color: v.$azul;
+            }
+            .tabla__td{
+                text-align: center;
+                color: v.$blanco;
+                padding: 10px 0;
+
+
+            }
+        }
+    }
+}

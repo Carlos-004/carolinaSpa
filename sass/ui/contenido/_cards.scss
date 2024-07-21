@@ -1,0 +1,57 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.cards{
+    margin-top: 50px;
+    .cards__grid {
+        @include m.grid(3,20px);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card{
+            img{
+                transition: transform 0.3s ease;
+
+                &:hover{
+                    transform: scale(1.1) rotate(10deg);
+                }
+            }
+            .card__contenido{
+                background-color: v.$blanco;
+                position: relative;
+                bottom: 20px;
+                margin: 0 10px;
+                .card__heading{
+                    font-family: v.$fuenteCursiva;
+                    text-align: center;
+                    color: v.$secundario;
+                    font-size: 25px;
+
+                    span{
+                        display: block;
+                        margin: -18px;
+                        font-family: v.$fuentePrincipal;
+                        font-weight: 400;
+                        font-size: 34px;
+                        color: v.$negro;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .card__enlace{
+                display: block;
+                background-color: v.$secundario;
+                margin-top: 20px;
+                padding: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                color: v.$blanco;
+            }
+        }
+    }
+}

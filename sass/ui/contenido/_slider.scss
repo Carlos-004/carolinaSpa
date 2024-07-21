@@ -1,0 +1,17 @@
+@use "../../base/variables" as v;
+
+.swiper{
+    margin-bottom: 40px;
+    // position: absolute;
+    overflow: hidden;
+    .swiper-wrapper{
+        height: 100%;
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        transition-property: transform;
+    }
+}
+.swiper-pagination-bullet{
+   background-color: v.$blanco;
+}

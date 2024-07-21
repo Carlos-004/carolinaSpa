@@ -1,0 +1,33 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.header{
+    .header__grid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include m.telefono{
+            justify-self: unset;
+            flex-direction: column;
+        }
+
+        .header__logo{
+            img{
+                width: 300px;
+            }
+        }
+
+        .sociales{
+            @include m.telefono{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .sociales__enlace{
+                padding: 10px;
+            }
+        }
+    }
+}
